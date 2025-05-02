@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>P</LANGUAGE>
+     <ID/>
+     <TEXT>Interface employee</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS/>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>LT_FUNCIONARIO2</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TY_EM_FUN</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LT_FUNCIONARIO</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TY_EMP_DATA</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>NATIO</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR20</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GBDAT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>GBDAT</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GESCH</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR20</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LOGO</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>XSTRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LOGO_RODAPE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>XSTRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>FNAME</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>VORNA</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LNAME</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>NACHN</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>PERNR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PERSNO</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES>
+      <FPCLINE>*Tipo para os dados do funcionário (Poderia criar a estrutura na SE11</FPCLINE>
+      <FPCLINE>*ou por aqui.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>TYPES: BEGIN OF ts_emp_data,</FPCLINE>
+      <FPCLINE>         pernr   TYPE persno,</FPCLINE>
+      <FPCLINE>         ename   TYPE emnam,</FPCLINE>
+      <FPCLINE>         begda   TYPE datum,</FPCLINE>
+      <FPCLINE>         endtada TYPE datum,</FPCLINE>
+      <FPCLINE>       END OF ts_emp_data,</FPCLINE>
+      <FPCLINE>       ty_emp_data TYPE STANDARD TABLE OF ts_emp_data.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>*Tipo para os dados do funcionário PA002</FPCLINE>
+      <FPCLINE>TYPES: BEGIN OF ts_fun,</FPCLINE>
+      <FPCLINE>         pernr TYPE persno,</FPCLINE>
+      <FPCLINE>         NACHN TYPE PAD_NACHN,</FPCLINE>
+      <FPCLINE>         GBDAT TYPE GBDAT,</FPCLINE>
+      <FPCLINE>         VNAMC TYPE VORNAMC,</FPCLINE>
+      <FPCLINE>       END OF ts_fun,</FPCLINE>
+      <FPCLINE>       ty_em_fun TYPE STANDARD TABLE OF ts_fun.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>TYPES: TY_DATAB_RAN TYPE DATAB_RAN.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>TYPES: ty_range_date TYPE STANDARD TABLE OF TY_DATAB_RAN.</FPCLINE>
+     </TYPES>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>IM_GBDAT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>DATAB_RAN</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE>X</BYVALUE>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>IM_PERNR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PERSNO</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE>X</BYVALUE>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>IM_GBDAT</FPPARAMETER>
+      <FPPARAMETER>IM_PERNR</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS/>
+     <INITIALIZATION>
+      <FPCLINE>*Declaração</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*DATA: lv_lname     TYPE nachn, &quot;Último nome (last name)</FPCLINE>
+      <FPCLINE>*      lv_fname     TYPE vorna,</FPCLINE>
+      <FPCLINE>*      lv_gesch     TYPE gesch,</FPCLINE>
+      <FPCLINE>*      lv_gbdat     TYPE gbdat,</FPCLINE>
+      <FPCLINE>*      lv_natio     TYPE natio.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>CONSTANTS: lc_object TYPE TDOBJECTGR VALUE &apos;GRAPHICS&apos;,</FPCLINE>
+      <FPCLINE>           lc_logo TYPE TDOBNAME VALUE &apos;SAP_LOGO&apos;,</FPCLINE>
+      <FPCLINE>           lc_logo_rodape TYPE TDOBNAME VALUE &apos;LOGO_WORLD&apos;,</FPCLINE>
+      <FPCLINE>           lc_id   TYPE TDIDGR VALUE &apos;BMAP&apos;,</FPCLINE>
+      <FPCLINE>           lc_btype TYPE TDBTYPE VALUE &apos;BCOL&apos;.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>*Buscar as informações necessárias (primeiro nome e último nome do funcionário)</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>SELECT SINGLE nachn,</FPCLINE>
+      <FPCLINE>              vorna,</FPCLINE>
+      <FPCLINE>              gesch,</FPCLINE>
+      <FPCLINE>              gbdat,</FPCLINE>
+      <FPCLINE>              natio</FPCLINE>
+      <FPCLINE>       FROM pa0002</FPCLINE>
+      <FPCLINE>       INTO @DATA(ls_dados_ca)&quot;1 informação com duas variáveis, poderia também criar uma estrutura inline.</FPCLINE>
+      <FPCLINE>  WHERE pernr EQ @im_pernr</FPCLINE>
+      <FPCLINE>  AND begda LE @sy-datum &quot;Menor ou igual</FPCLINE>
+      <FPCLINE>  AND endda GE @sy-datum. &quot;Maior ou igual</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>IF sy-subrc IS INITIAL. &quot;Pode ser =0</FPCLINE>
+      <FPCLINE>  pernr = im_pernr. &quot;Vai receber o parametro de importação</FPCLINE>
+      <FPCLINE>  fname = ls_dados_ca-vorna.</FPCLINE>
+      <FPCLINE>  lname = ls_dados_ca-nachn.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  IF ls_dados_ca-gesch = &apos;1&apos;.</FPCLINE>
+      <FPCLINE>    gesch = &apos;Masculino&apos;.</FPCLINE>
+      <FPCLINE>  ELSEIF ls_dados_ca-gesch = &apos;2&apos;.</FPCLINE>
+      <FPCLINE>    gesch = &apos;Feminino&apos;.</FPCLINE>
+      <FPCLINE>  ELSE.</FPCLINE>
+      <FPCLINE>    gesch = &apos;Não informado&apos;.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  gbdat = ls_dados_ca-gbdat.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  IF ls_dados_ca-natio IS INITIAL.</FPCLINE>
+      <FPCLINE>    natio = &apos;Não informado&apos;.</FPCLINE>
+      <FPCLINE>    ELSE.</FPCLINE>
+      <FPCLINE>      natio = ls_dados_ca-natio.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*Buscar logo/imagem</FPCLINE>
+      <FPCLINE>&quot;Já existem funções prontas</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>PERFORM buscar_imagem USING lc_object lc_logo lc_id lc_btype</FPCLINE>
+      <FPCLINE>        CHANGING logo.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>PERFORM buscar_imagem USING lc_object lc_logo_rodape lc_id lc_btype</FPCLINE>
+      <FPCLINE>        CHANGING logo_rodape.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*Busca/chamada do busca dados</FPCLINE>
+      <FPCLINE>PERFORM busca_dados USING im_pernr.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*Busca dados Funcionarios</FPCLINE>
+      <FPCLINE>BREAK-POINT.</FPCLINE>
+      <FPCLINE>DATA: lt_range TYPE ty_range_date.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>APPEND im_gbdat TO lt_range.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>PERFORM busca_dados_data USING lt_range.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS>
+      <FPCLINE>FORM buscar_imagem USING lc_object TYPE TDOBJECTGR</FPCLINE>
+      <FPCLINE>                         lc_logo TYPE TDOBNAME</FPCLINE>
+      <FPCLINE>                         lc_id   TYPE TDIDGR</FPCLINE>
+      <FPCLINE>                         lc_btype TYPE TDBTYPE</FPCLINE>
+      <FPCLINE>                         CHANGING</FPCLINE>
+      <FPCLINE>                         lv_logo TYPE xstring.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>CALL METHOD cl_ssf_xsf_utilities=&gt;get_bds_graphic_as_bmp</FPCLINE>
+      <FPCLINE>  EXPORTING</FPCLINE>
+      <FPCLINE>    p_object       = lc_object     &quot; SAPscript Graphics Management: Application object</FPCLINE>
+      <FPCLINE>    p_name         = lc_logo     &quot; logo Name</FPCLINE>
+      <FPCLINE>    p_id           = lc_id         &quot; SAPscript Graphics Management: ID</FPCLINE>
+      <FPCLINE>    p_btype        = lc_btype        &quot; SAPscript: Type of graphic</FPCLINE>
+      <FPCLINE>  RECEIVING</FPCLINE>
+      <FPCLINE>    p_bmp          = lv_logo        &quot; Graphic Data</FPCLINE>
+      <FPCLINE>  EXCEPTIONS</FPCLINE>
+      <FPCLINE>    not_found      = 1</FPCLINE>
+      <FPCLINE>    internal_error = 2</FPCLINE>
+      <FPCLINE>    OTHERS         = 3.</FPCLINE>
+      <FPCLINE>IF sy-subrc IS NOT INITIAL.</FPCLINE>
+      <FPCLINE>  &quot;Validação</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>   ENDFORM.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>FORM busca_dados USING lv_pernr TYPE persno.</FPCLINE>
+      <FPCLINE>*  DO 3 TIMES.</FPCLINE>
+      <FPCLINE>    SELECT pernr,</FPCLINE>
+      <FPCLINE>           ename,</FPCLINE>
+      <FPCLINE>           begda,</FPCLINE>
+      <FPCLINE>           endda</FPCLINE>
+      <FPCLINE>      FROM pa0001</FPCLINE>
+      <FPCLINE>      INTO @DATA(ls_dados)</FPCLINE>
+      <FPCLINE>      WHERE pernr EQ @lv_pernr.</FPCLINE>
+      <FPCLINE>    ENDSELECT.</FPCLINE>
+      <FPCLINE>    IF sy-subrc IS INITIAL.</FPCLINE>
+      <FPCLINE>      APPEND ls_dados TO lt_funcionario.</FPCLINE>
+      <FPCLINE>    ENDIF.</FPCLINE>
+      <FPCLINE>*  ENDDO.</FPCLINE>
+      <FPCLINE>ENDFORM.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>FORM busca_dados_data USING lv_range TYPE ty_range_date.</FPCLINE>
+      <FPCLINE>*  DO 3 TIMES.</FPCLINE>
+      <FPCLINE>  SELECT pernr,</FPCLINE>
+      <FPCLINE>         NACHN,</FPCLINE>
+      <FPCLINE>         GBDAT,</FPCLINE>
+      <FPCLINE>         VNAMC</FPCLINE>
+      <FPCLINE>      FROM PA0002</FPCLINE>
+      <FPCLINE>     INTO CORRESPONDING FIELDS OF TABLE @LT_FUNCIONARIO2</FPCLINE>
+      <FPCLINE>     WHERE gbdat IN @lv_range.</FPCLINE>
+      <FPCLINE>*  ENDDO.</FPCLINE>
+      <FPCLINE>ENDFORM.</FPCLINE>
+     </FORMS>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

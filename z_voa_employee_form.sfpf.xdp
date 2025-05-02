@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V11.0.9.20240424.1.48_SAP" APIVersion="3.6.24095.0"?><xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2025-05-01T20:21:15Z" uuid="51a825d0-48ad-4e88-8c4e-74e7658f33b3">
+<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.3/">
+   <?formServer defaultPDFRenderFormat acrobat10.0dynamic?>
+   <subform layout="tb" locale="pt_BR" name="data" restoreState="auto">
+      <pageSet>
+         <pageArea id="Page1" name="Page1">
+            <contentArea h="180.975mm" w="197.3mm" x="6.35mm" y="79.375mm"/>
+            <medium long="297mm" short="210mm" stock="a4"/>
+            <subform h="66.675mm" name="Cabecalho" w="196.85mm" x="6.35mm" y="3.175mm">
+               <bind match="none"/>
+               <draw h="9.466mm" name="Text1" w="100.256mm" x="50.8mm" y="6.35mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text xliff:rid="D109DCB6-33DF-46AD-A716-E30F54E6EA45">Dados dos funcionários: </text>
+                  </value>
+                  <font baselineShift="0pt" size="20pt" typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para hAlign="center" marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+                  <?renderCache.bounds 281356 23999 0 0 1417 1417 0 0?>
+                  <?renderCache.textRun 25 Dados dos funcionários:  0 24864 17208 0 0 0 "Arial" 1 0 20000 ISO-8859-1?></draw>
+               <subform h="41.275mm" name="Subform1" w="147.725mm" x="28.575mm" y="22.225mm">
+                  <bind match="none"/>
+                  <field access="readOnly" h="6.644mm" name="PERNR" w="66.675mm" x="3.175mm" y="3.175mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="30.5733mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text xliff:rid="994E8639-23CA-49C4-A1B4-32C635C0D814">Nº da pessoa:</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text maxChars="8"/>
+                     </value>
+                     <bind match="dataRef" ref="$.PERNR"/>
+                     <desc>
+                        <text name="Schema Annotation">Nº pessoal</text>
+                     </desc>
+                     <event activity="ready" name="event__form_ready" ref="$form">
+                        <script contentType="application/x-javascript">
+if(this.rawValue == null){
+Subformulário2.presence = "hidden";
+}
+</script>
+                     </event>
+                  </field>
+                  <field access="readOnly" h="6.644mm" name="FNAME" w="66.68mm" x="3.17mm" y="12.7mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="30.8066mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text xliff:rid="D079FA94-3109-4C4E-B131-97BCB912C823">Primeiro nome:</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text maxChars="25"/>
+                     </value>
+                     <bind match="dataRef" ref="$.FNAME"/>
+                     <desc>
+                        <text name="Schema Annotation">1º nome</text>
+                     </desc>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                  </field>
+                  <field access="readOnly" h="6.644mm" name="LNAME" w="66.675mm" x="76.2mm" y="12.7mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="30.425mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text xliff:rid="0E5DA985-24FB-4353-95C3-1E343A9CDE71">Sobrenome:</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text maxChars="25"/>
+                     </value>
+                     <bind match="dataRef" ref="$.LNAME"/>
+                     <desc>
+                        <text name="Schema Annotation">Sobrenome</text>
+                     </desc>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge/>
+                     <corner/>
+                     <fill>
+                        <color value="192,192,192"/>
+                     </fill>
+                  </border>
+                  <field access="readOnly" h="6.644mm" name="GBDAT" w="66.675mm" x="3.175mm" y="31.75mm">
+                     <ui>
+                        <dateTimeEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </dateTimeEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <date/>
+                     </value>
+                     <caption reserve="31mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text xliff:rid="5BC80938-EAFA-41B1-B38C-26E056470B8C">Data nascimento:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.GBDAT">
+                        <picture>date{YYYY-MM-DD}</picture>
+                     </bind>
+                     <desc>
+                        <text name="Anotação do schema">Data de nascimento</text>
+                     </desc>
+                  </field>
+                  <field access="readOnly" h="6.644mm" name="GESCH" w="66.675mm" x="76.2mm" y="22.225mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="30.605mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text xliff:rid="2FFD4E10-7D93-4E85-8891-ADC98AF4A3E9">Sexo:</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text maxChars="20"/>
+                     </value>
+                     <bind match="dataRef" ref="$.GESCH"/>
+                     <desc>
+                        <text name="Anotação do schema">Char 20</text>
+                     </desc>
+                  </field>
+                  <field access="readOnly" h="6.644mm" name="NATIO" w="66.68mm" x="3.175mm" y="22.225mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="30.9349mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text xliff:rid="EE7CC958-92FE-4F71-89F5-43790E0407CD">Nacionalidade: </text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text maxChars="20"/>
+                     </value>
+                     <bind match="dataRef" ref="$.NATIO"/>
+                     <desc>
+                        <text name="Anotação do schema">Char 20</text>
+                     </desc>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <field h="19.05mm" name="GRAPHIC" w="25.4mm">
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+                  <bind match="dataRef" ref="$.GRAPHIC"/>
+                  <desc>
+                     <exData name="Anotação do schema">Nó de gráfico GRAPHIC
+URL-FIELD = LOGO</exData>
+                  </desc>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform h="33.475mm" name="Rodape" w="196.85mm" x="6.35mm" y="263.525mm">
+               <bind match="none"/>
+               <field h="6.35mm" name="TEXT" w="107.95mm" x="41.275mm" y="3.175mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT"/>
+                  <desc>
+                     <exData name="Anotação do schema">Nó de texto TEXT
+Texto de include SAPScript 
+ NAME = Z_VOA_RODAPE 
+ LANGUAGE = P 
+ OBJECT = TEXT 
+ ID = ST</exData>
+                  </desc>
+               </field>
+               <field h="10.875mm" name="GRAPHIC1" w="15.875mm" x="92.075mm" y="12.7mm">
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+                  <bind match="dataRef" ref="$.GRAPHIC1"/>
+                  <desc>
+                     <exData name="Anotação do schema">Nó de gráfico GRAPHIC1
+URL-FIELD = LOGO_RODAPE</exData>
+                  </desc>
+               </field>
+               <draw name="Páginas" x="88.9mm" y="25.4mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html" maxLength="0" xliff:rid="E16B8B0D-48F7-44EA-8BFD-1AF422D8BB0B">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>Página<span style="xfa-spacerun:yes"> </span><span xfa:embed="#floatingField006334" xfa:embedMode="raw" xfa:embedType="uri"/> de<span style="xfa-spacerun:yes"> </span><span xfa:embed="#floatingField026500" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+               </draw>
+               <field access="nonInteractive" h="7.5mm" id="floatingField006334" name="PáginaAtual" presence="hidden" w="55mm" x="60.92mm" y="226.886mm">
+                  <ui>
+                     <numericEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="20mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text xliff:rid="698F5EE7-A6AE-4DAC-B06D-F8FCB26827A5">Campo de Texto</text>
+                     </value>
+                  </caption>
+                  <calculate override="error"/>
+                  <event activity="ready" name="event__layout_ready" ref="$layout">
+                     <script contentType="application/x-javascript">this.rawValue = xfa.layout.page(this);
+</script>
+                  </event>
+                  <?templateDesigner floatingFieldPlaceholder #?>
+                  <bind match="none"/>
+               </field>
+               <field access="nonInteractive" h="7.5mm" id="floatingField026500" name="ContagemPáginas" presence="hidden" w="55mm" x="60.92mm" y="226.886mm">
+                  <ui>
+                     <numericEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="20mm">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text xliff:rid="0141A50A-CE55-4DA2-AA12-E7AA53BB2EBC">Campo de Texto</text>
+                     </value>
+                  </caption>
+                  <calculate override="error"/>
+                  <event activity="ready" name="event__layout_ready" ref="$layout">
+                     <script contentType="application/x-javascript">this.rawValue = xfa.layout.pageCount();
+</script>
+                  </event>
+                  <?templateDesigner floatingFieldPlaceholder ##?>
+                  <bind match="none"/>
+               </field>
+               <?templateDesigner expand 1?>
+               <field h="14.05mm" name="QRCODE" w="19.05mm" x="9.525mm" y="6.35mm">
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+                  <bind match="dataRef" ref="$.QRCODE"/>
+                  <desc>
+                     <exData name="Anotação do schema">Nó de gráfico GRAPHIC2
+URL-FIELD = IV_QRCODE</exData>
+                  </desc>
+               </field>
+            </subform>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 0?></pageSet>
+      <subform layout="tb" w="7.767722in">
+         <subform columnWidths="48.4188mm 48.4188mm 48.4188mm 48.4188mm" layout="table" name="LT_FUNCIONARIO">
+            <subform id="overflowLeader_ID" layout="row" name="overflowLeader">
+               <draw>
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text xliff:rid="AA479FBA-994A-4AC9-B6EE-EF6031BE0879">Nº da pessoa</text>
+                  </value>
+                  <font typeface="Arial"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </draw>
+               <draw>
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text xliff:rid="6520D4D7-1A4C-4ED3-A2F3-8B5026C0DB94">Nome do funcionário</text>
+                  </value>
+                  <font baselineShift="0pt" typeface="Arial"/>
+                  <para hAlign="center" marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </draw>
+               <draw>
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text xliff:rid="464B351E-434F-4118-A72E-06BB950EEE96">Válido de</text>
+                  </value>
+                  <font typeface="Arial"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </draw>
+               <draw>
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text xliff:rid="39880852-2AA6-495B-B117-1267B79525BE">Válido até</text>
+                  </value>
+                  <font typeface="Arial"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </draw>
+               <assist role="TH"/>
+               <occur max="-1"/>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <subform layout="row" name="DATA">
+               <field h="9mm" name="PERNR" w="68.056mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text maxChars="8"/>
+                  </value>
+                  <bind match="dataRef" ref="$.PERNR"/>
+                  <desc>
+                     <text name="Anotação do schema">Nº pessoal</text>
+                  </desc>
+                  <border>
+                     <edge/>
+                  </border>
+               </field>
+               <field h="9mm" name="ENAME" w="68.056mm" x="2.679375in">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text maxChars="40"/>
+                  </value>
+                  <bind match="dataRef" ref="$.ENAME"/>
+                  <desc>
+                     <text name="Anotação do schema">Nome editado do empregado ou candidato</text>
+                  </desc>
+                  <border>
+                     <edge/>
+                  </border>
+               </field>
+               <field h="9mm" name="BEGDA" w="62mm" x="5.35875in">
+                  <ui>
+                     <dateTimeEdit>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <bind match="dataRef" ref="$.BEGDA">
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </bind>
+                  <desc>
+                     <text name="Anotação do schema">Data</text>
+                  </desc>
+                  <validate nullTest="error"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </field>
+               <field h="9mm" name="ENDTADA" w="62mm" y="0.354333in">
+                  <ui>
+                     <dateTimeEdit>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <bind match="dataRef" ref="$.ENDTADA">
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </bind>
+                  <desc>
+                     <text name="Anotação do schema">Data</text>
+                  </desc>
+                  <validate nullTest="error"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </field>
+               <assist role="TR"/>
+               <occur max="-1"/>
+               <bind match="dataRef" ref="$.DATA[*]"/>
+               <?templateDesigner expand 1?></subform>
+            <occur min="0"/>
+            <bind match="dataRef" ref="$.LT_FUNCIONARIO"/>
+            <overflow leader="overflowLeader"/>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">11.0.9.20240424.1.48.2</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 140 38 00030006001D00260027002800310032003300340035003600370039004400450046004700480049004A004C004F00500051005200530055005600570058005B00690070009E #:CDENOPQRSTVabcdefgilmnoprstuxáéº?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 56 15 0003001D00270044004600470049004C005100520055005600580069 :Dacdfinorsuá?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner Grid show:1, snap:1, units:1, color:ff8080, origin:(0,0), interval:(79375,79375), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner SaveTaggedPDF 1?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner FormTargetVersion 33?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 39?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base>https://VHCALS4HCS.DUMMY.NODOMAIN:44301/sap/bc/fp/form/layout/</base>
+         </template>
+      </common>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <version>1.7</version>
+         <adobeExtensionLevel>8</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection dataDescription="data" name="Z_VOA_EMPLOYEE_FORM">
+      <uri/>
+      <rootElement>data</rootElement>
+   </xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="data">
+      <data>
+         <FNAME/>
+         <LNAME/>
+         <LT_FUNCIONARIO dd:minOccur="0">
+            <DATA dd:maxOccur="-1">
+               <PERNR/>
+               <ENAME/>
+               <BEGDA/>
+               <ENDTADA/>
+            </DATA>
+         </LT_FUNCIONARIO>
+         <PERNR/>
+         <LOGO/>
+         <GESCH/>
+         <GRAPHIC/>
+         <NATIO/>
+         <GBDAT/>
+         <TEXT/>
+         <GRAPHIC1/>
+         <QRCODE/>
+      </data>
+   </dd:dataDescription>
+</xfa:datasets>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale desc="Português (Brasil)" name="pt_BR">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>janeiro</month>
+            <month>fevereiro</month>
+            <month>março</month>
+            <month>abril</month>
+            <month>maio</month>
+            <month>junho</month>
+            <month>julho</month>
+            <month>agosto</month>
+            <month>setembro</month>
+            <month>outubro</month>
+            <month>novembro</month>
+            <month>dezembro</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>fev</month>
+            <month>mar</month>
+            <month>abr</month>
+            <month>mai</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>ago</month>
+            <month>set</month>
+            <month>out</month>
+            <month>nov</month>
+            <month>dez</month>
+         </monthNames>
+         <dayNames>
+            <day>domingo</day>
+            <day>segunda-feira</day>
+            <day>terça-feira</day>
+            <day>quarta-feira</day>
+            <day>quinta-feira</day>
+            <day>sexta-feira</day>
+            <day>sábado</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>dom</day>
+            <day>seg</day>
+            <day>ter</day>
+            <day>qua</day>
+            <day>qui</day>
+            <day>sex</day>
+            <day>sáb</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, D' de 'MMMM' de 'YYYY</datePattern>
+         <datePattern name="long">D' de 'MMMM' de 'YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">HH'h'MM'min'SS's' Z</timePattern>
+         <timePattern name="long">H'h'M'min'S's' Z</timePattern>
+         <timePattern name="med">HH:MM:SS</timePattern>
+         <timePattern name="short">HH:MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.zz</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">R$</currencySymbol>
+         <currencySymbol name="isoname">BRL</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 9.0-c000 79.cca54b0, 2022/11/26-09:29:55        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2025-05-01T20:21:15Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
+         <xmpMM:DocumentID>uuid:51a825d0-48ad-4e88-8c4e-74e7658f33b3</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>11.0.9.20240424.1.48.2</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
